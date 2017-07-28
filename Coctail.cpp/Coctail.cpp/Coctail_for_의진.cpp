@@ -40,14 +40,16 @@ void MaxMinSort(int *arr, int fst, int lst) {//배열의 처음과 끝만큼 돌릴 값을 받
 
 		for (int i = fst; i < lst; i++) {
 			if (min == arr[i]) {
-			int tmp = arr[i];
-			arr[i] = arr[fst];
-			arr[fst] = tmp;
+				int tmp = arr[i];
+				arr[i] = arr[fst];
+				arr[fst] = tmp;
+			}
 		}//배열에 min값이 어디있는지 탐색한 후 있으면 탐색범위의 맨처음값과 swap
-		if (max == arr[i]) {
-			int tmp = arr[i];
-			arr[i] = arr[lst-1];
-			arr[lst-1] = tmp;	
+		for (int i = fst; i < lst; i++) {
+			if (max == arr[i]) {
+				int tmp = arr[i];
+				arr[i] = arr[lst - 1];
+				arr[lst - 1] = tmp;
 			}//배열에 max값이 어디있는지 탐색한 후 있으면 탐색범위의 맨 마지막값과 swap
 		}
 		array
