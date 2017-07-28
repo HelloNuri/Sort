@@ -1,26 +1,7 @@
 #include<stdio.h>
-#include<stdlib.h>
-void output_array(int *arr,int n) {
-	for (int i = 0; i < n; i++) {
-		printf("%d ", arr[i]);
-	}
-	printf("\n\n");
-}
-//배열을 입력받고 출력하는 함수
+#include"output.h"
 
-void output_var(int a, int b) 
-{
-	printf("최소값과 최대값 : %d %d\n", a, b);
-}
-//변수 2개를 출력, 최소,최대값 출력하기 귀찮음
 
-void output_min(int a, int b) {
-	printf("시작 번호와 끝 번호 : %d %d\n", a, b);
-}
-//시작주소와 끝 주소 출력
-
-#define arr_n 11
-#define array output_array(arr, arr_n);//배열을 처음부터 arr_n개까지 출력
 
 void MaxMinSort(int *arr, int fst, int lst) {//배열의 처음과 끝만큼 돌릴 값을 받아옴 
 	if (fst < lst) {
@@ -59,7 +40,7 @@ void MaxMinSort(int *arr, int fst, int lst) {//배열의 처음과 끝만큼 돌릴 값을 받
 
 void main() {
 	//int first = 0, last = 10; //포문에 쓰일 탐색할 시작배열과 마지막 배열 //change : 어차피 배열 숫자의 수는 바뀔 수 있어서 sizeof로 지정해야 하니 주석처리
-	int arr[arr_n] = { 7,1,3,4,9,5,10,6,2,11,8 };
+	int arr[arr_n] = { 7,1,3,4,9,5,10,6,2,8 };
 	printf("=================정렬 전 배열값 출력================\n");
 	array
 	//change : for문으로 아래 함수를 반복시키지 않을 거임
